@@ -4,7 +4,6 @@ archivo = "http://medata.gov.co/sites/default/files/medata_harvest_files/encuest
 df = pd.read_csv(archivo, sep=';')
 
 
-
 class CargarDatos:
     url = ""
     nombre = ""
