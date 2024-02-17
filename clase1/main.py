@@ -1,19 +1,12 @@
-class Vehiculo:
-    marca = ''
-    combustible = ''
+class MotorElectrico:
+    potencia = None
 
     def encender(self):
-        return f"se enciende el vehiculo con combustible {self.combustible}"
-
-    def arrancar(self):
+        print("Encendiendo motor eléctrico")
+    
+    def __init__(self):
         pass
 
-    def __init__(self, combustible, marca):
-        self.combustible = combustible
-        self.marca = marca
-    
-
-carro = Vehiculo('corriente', 'Mazda')
-print(carro.marca)
-print("="*10)
-print(carro.encender())
+motor1 = MotorElectrico()
+motor1.potencia = 1000
+motor1.encender()
