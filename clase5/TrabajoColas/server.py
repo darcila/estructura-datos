@@ -3,8 +3,6 @@
 # se debe instalar pydantic: pip install pydantic
 # COmando para ejecutar el servidor uvicorn server:app --reload
 from fastapi import FastAPI
-from pydantic import BaseModel
-from typing import Union
 from paquete.cola import Cola
 
 app = FastAPI()
@@ -20,8 +18,8 @@ def estado():
     return {"status": "ok", "elementos": elementos}
 
 @app.post("/encolar")
-def encolar(item: dict):
-    cola.encolar(item)
+def encolar(vehiculo: dict):
+    cola.encolar(vehiculo)
     return {"status": "ok"}
 
 @app.get("/desencolar")

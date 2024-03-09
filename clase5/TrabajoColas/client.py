@@ -3,9 +3,9 @@ import requests
 url = 'https://refactored-chainsaw-r4prpp99jwc5rvq-8000.app.github.dev/'
 
 # ejemplo request en GET
-r = requests.get(url)
+r = requests.get(url, timeout=5)
 print(r.text)
 
 # ejemplo request en POST
-r = requests.post(url + 'encolar', json={'nombre': 'Juan', 'productos': ['manzana', 'pera']})
+r = requests.post(url + 'encolar', json={'tipo': 'moto', 'matricula': 'ABC123', 'color': 'rojo', 'marca': 'yamaha', 'kilometraje': 1000}, timeout=5)
 print(r.text)

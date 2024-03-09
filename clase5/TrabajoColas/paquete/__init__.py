@@ -1,2 +1,2 @@
-from .tipos import Item
+from .tipos import Vehiculo, Pruebas
 from .cola import Cola
