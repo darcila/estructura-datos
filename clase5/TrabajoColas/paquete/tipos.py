@@ -10,5 +10,5 @@ class Vehiculo(BaseModel):
     color: str # Color del vehiculo
     marca: str # Marca del vehiculo
     kilometraje: int # Kilometraje del vehiculo
-    pruebas_tecnicas: [Pruebas]
+    pruebas: list[Pruebas]  # Arreglo de pruebas tecnicas
     
