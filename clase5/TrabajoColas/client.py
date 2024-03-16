@@ -1,6 +1,6 @@
 import requests
 
-url = 'https://refactored-chainsaw-r4prpp99jwc5rvq-8000.app.github.dev/'
+url = 'https://animated-memory-v6qgqq45xvcpwrq-8080.app.github.dev/'
 
 # ejemplo request en GET
 r = requests.get(url, timeout=5)

@@ -15,7 +15,9 @@ class Cola:
 
     def encolar(self, valor: Vehiculo):
         nuevo_nodo = Nodo(valor)
-        
+        print(nuevo_nodo)
+        #nuevo_nodo.valor.pruebas = self.agregar_pruebas_tecnicas(nuevo_nodo.valor.tipo)
+
         if self.esta_vacia():
             self.primero = nuevo_nodo
         else:
