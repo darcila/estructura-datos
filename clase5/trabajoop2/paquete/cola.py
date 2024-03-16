@@ -1,7 +1,7 @@
-from .tipos import Vehiculo, Pruebas
+from .tipos import Item
 
 class Nodo:
-    def __init__(self, valor):
+    def __init__(self, valor: Item):
         self.valor = valor
         self.siguiente = None
 
@@ -13,11 +13,8 @@ class Cola:
     def esta_vacia(self):
         return self.primero is None
 
-    def encolar(self, valor):
+    def encolar(self, valor: Item):
         nuevo_nodo = Nodo(valor)
-        print(nuevo_nodo)
-        #nuevo_nodo.valor.pruebas = self.agregar_pruebas_tecnicas(nuevo_nodo.valor.tipo)
-
         if self.esta_vacia():
             self.primero = nuevo_nodo
         else:
@@ -33,17 +30,6 @@ class Cola:
             self.ultimo = None
         return valor
     
-    def agregar_pruebas_tecnicas(self, tipo: str):
-        tipos_prueba = {
-            'moto': ['frenos', 'luces', 'gases', 'llantas'],
-            'carro': ['frenos', 'luces', 'gases', 'llantas'],
-            'camion': ['frenos', 'luces', 'aceite', 'aire', 'frenos_de_aire']
-        }
-        pruebas = []
-        for prueba in tipos_prueba[tipo]:
-            pruebas.append(Pruebas(nombre=prueba, resultado=False))
-        return pruebas
-    
     def ver_listado(self):
         pass
 
@@ -53,6 +39,6 @@ class Cola:
     def ver_ultimo(self):
         pass
 
-    def contar(self) -> int:
-        return 0
+    def contar(self):
+        pass
         

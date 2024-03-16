@@ -1,16 +1,17 @@
+# Para correr el servidor: uvicorn server:app --reload
 # se debe instalar uvicorn: pip install uvicorn
 # se debe instalar FastAPI: pip install fastapi
-# Comando para ejecutar el servidor = uvicorn server:app --reload --port 8080
 from fastapi import FastAPI
+from pydantic import BaseModel
+from typing import Union
 from paquete.cola import Cola
-from paquete import Vehiculo
 
 app = FastAPI()
 cola = Cola()
 
 @app.get("/")
 def read_root():
-    return {"Hello": "Prueba"}
+    return {"Hello": "World"}
 
 @app.get("/estado")
 def estado():
@@ -18,10 +19,8 @@ def estado():
     return {"status": "ok", "elementos": elementos}
 
 @app.post("/encolar")
-def encolar(vehiculo):
-    print(vehiculo)
-    #vehiculo = Vehiculo(vehiculo['tipo'], vehiculo['matricula'], vehiculo['color'], vehiculo['marca'], vehiculo['kilometraje'])
-    #cola.encolar(vehiculo)
+def encolar(item: dict):
+    cola.encolar(item)
     return {"status": "ok"}
 
 @app.get("/desencolar")

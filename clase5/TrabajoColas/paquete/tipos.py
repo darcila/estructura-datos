@@ -8,7 +8,7 @@ class Vehiculo():
     color: str # Color del vehiculo
     marca: str # Marca del vehiculo
     kilometraje: int # Kilometraje del vehiculo
-    pruebas: list[]  # Arreglo de pruebas tecnicas
+    pruebas= []  # Arreglo de pruebas tecnicas
 
     def __init__(self, tipo: str, matricula: str, color: str, marca: str, kilometraje: int):
         self.tipo = tipo
