@@ -1,13 +1,5 @@
-edad = 22
-edad = int(input("Introduce tu edad: "))
-
-if edad >= 18:
-  print("Puedes entrar")
-else:
-  print("No puedes entrar, eres menor de edad")
-
-# preguntar el nombre y mostrar en pantalla la edad y el nombre
-nombre = input("Introduce tu nombre: ")
-edad = int(input("Introduce tu edad: "))
-
-print("Hola", nombre, "tienes", edad, "años")
+temperatura = []
+for n in range(0,23):
+    t = int(input("Ingrese la temperatura"))
+    temperatura.append(t)
+print(temperatura)
